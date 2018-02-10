@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+    <p><a class="btn btn-default" href="/register">Add New</a></p>
+</div>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Action</th>
+    </tr>
+    {{#each data as |item|}}
+           <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phone}}</td>
+            <td><a class="btn btn-danger" href="/delete?_id={{item._id}}">delete</a></td>
+           </tr>
+    {{/each}}
+
+</body>
+</html>
